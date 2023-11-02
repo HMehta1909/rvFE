@@ -1,0 +1,87 @@
+<div class="container">
+    <h2>Add Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" formControlName="productName" class="form-control">
+        <!-- <div *ngIf="productForm.get('productName').hasError('required') && productForm.get('productName').touched" class="error">
+          Product Name is required.
+        </div> -->
+      </div>
+  
+      <div class="form-group">
+        <label for="productDescription">Product Description:</label>
+        <input type="text" id="productDescription" formControlName="productDescription" class="form-control">
+        <!-- <div *ngIf="productForm.get('productDescription').hasError('required') && productForm.get('productDescription').touched" class="error">
+          Product Description is required.
+        </div> -->
+      </div>
+      <div class="form-group">
+        <label for="maximumRetailPrice">Maximum Retail Price:</label>
+        <input type="number" id="maximumRetailPrice" formControlName="maximumRetailPrice" class="form-control">
+        <!-- <div *ngIf="productForm.get('maximumRetailPrice').touched" class="error">
+          Maximum Retail Price is required.
+        </div> -->
+      </div>
+
+      <div class="form-group">
+        <label for="discountedPrice">Discounted Price:</label>
+        <input type="number" id="discountedPrice" formControlName="discountedPrice" class="form-control">
+        <!-- <div *ngIf="productForm.get('maximumRetailPrice').touched" class="error">
+          Maximum Retail Price is required.
+        </div> -->
+    </div>
+<!-- quantityAvailableBySizeAndColor: { [key: string]: { [key: string]: number } }; -->
+<div class="form-group">
+    <label for="brand">Brand Name:</label>
+    <input type="text" id="productName" formControlName="brand" class="form-control">
+    <!-- <div *ngIf="productForm.get('productName').hasError('required') && productForm.get('productName').touched" class="error">
+      Product Name is required.
+    </div> -->
+  </div>
+      <!-- images: string[]; -->
+
+      <div class="form-group">
+        <label for="sizes">Sizes:</label>
+        <div *ngFor="let size of sizes">
+          <label>
+            <input type="checkbox" [formControl]="getSizeControl(size)"> {{ size }}
+          </label>
+          <input type="number" [formControl]="getQuantityControl(size)" class="form-control">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="releaseDate">Release Date:</label>
+        <input type="date" id="releaseDate" formControlName="releaseDate" class="form-control">
+        <!-- <div *ngIf="productForm.get('releaseDate').hasError('required') && productForm.get('releaseDate').touched" class="error">
+          Release Date is required.
+        </div> -->
+      </div>
+      
+      <!-- Add other form fields for maximumRetailPrice, discountedPrice, numberOfRating, rating, totalSoldQuantity, isActive, quantityAvailableBySizeAndColor, brand, and releaseDate -->
+  
+      <div class="form-group">
+        <label for="categories">Categories:</label>
+        <select id="categories" formControlName="categories" class="form-control" multiple>
+          <option value="CASUAL">Casual Dresses</option>
+          <option value="PARTY">Party Dresses</option>
+          <option value="COCKTAIL">Cocktail Dresses</option>
+          <option value="FORMAL">Formal Dresses</option>
+          <option value="MAXI">Maxi Dresses</option>
+          <option value="MIDI">Midi Dresses</option>
+          <option value="MINI">Mini Dresses</option>
+          <option value="SUMMER">Summer Dresses</option>
+          <option value="SHIFT">Shift Dresses</option>
+          <option value="WRAP">Wrap Dresses</option>
+          <option value="BODYCON">Bodycon Dresses</option>
+          <option value="A_LINE">A-Line Dresses</option>
+          <option value="SKATER">Skater Dresses</option>
+          <option value="SHIRT">Shirt Dresses</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Add Product</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,75 @@
+
+#header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between; /* This will push the title to the left and the button to the right */
+    align-items: center; /* Vertically center the content */
+    padding: 2vh; /* Add some padding for spacing */
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: fit-content;
+  // line-height: 10vh;
+    
+  }
+  
+  #app-title {
+    /* No need for float, it will be automatically on the left */
+    // color: white; /* You can set the text color */
+    // line-height: 3vh;
+    align-items: center;
+    display:flex;
+    font-size: xx-large;
+    background-image: url('logobg.jpg');
+    // background-size:contain;
+    background-position: center;
+    // background-repeat:repeat-x;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+
+
+
+  #logout-button {
+    /* No need for float, it will be automatically on the right */
+    color: white; /* You can set the text color */
+    font-size: large;
+  }
+  
+  .spacer {
+    flex-grow: 1; /* This will push the button to the right */
+  }
+  
+  #mat-form-field {
+  font-size: small;
+  height: auto !important;
+  min-width: auto !important;
+}
+  #mat-icon{
+    padding: 0%;
+    margin: 0%;
+
+    // margin-right: 2vw;
+    font-size: xx-large;
+  }
+
+  .mat-icon{
+    // width: 5vw;
+    // height: 7vh;
+    width: max-content;
+    height: fit-content;
+    
+  }
+
+  #appname {
+    display: flex;
+    flex-direction: column;
+}
+
+#subname{
+  font-size: xx-small;
+  line-height:normal;
+  // text-align: center;
+}

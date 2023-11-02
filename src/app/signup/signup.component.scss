@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    background-color: #D6FDFD !important;
+}
+
+.p {
+    font-weight: lighter;
+    text-align: center;
+}
+
+#txt a{
+        color: #F53649;
+        text-decoration: none;
+}
+
+
+
+.container {
+    background-color: #D6FDFD;
+    font-family: 'Raleway';
+}
+
+.my-form {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 70vw;
+    background-color:transparent;
+    
+}
+
+.my-card {
+    border-radius: 0.5cm;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack form fields and button vertically */
+    align-items: center; /* Center-align content horizontally */
+    padding: 3%; /* Add some padding for spacing */
+    
+}
+.mat-mdc-card-content:first-child {
+    padding-top: 0;
+}
+.left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // height: 100vh;
+    margin: 10vh 0;
+    
+}
+
+.full {
+    display: flex;
+    // background-color: #EAF3F3;
+    // background-image: url('./../header/logobg.jpg');
+    // background-position: center;
+    // background-repeat:repeat
+    
+}
+
+#outside-mat{
+    background-image: url('./../header/logobg.jpg');
+    padding: 2%;
+    border-radius: 0.7cm;
+}
+
+.full-width {
+    width: 100%; /* Make fields take the full width of the card */
+    // margin-bottom: 2vh; /* Add some spacing between fields */
+}
+
+.button1 {
+    // background-color: #3ab19b;
+    color: #fff;
+    width: 100%; /* Button takes full width of the card */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column; /* Stack fields and button vertically */
+    align-items: center; /* Center-align fields and button horizontally */
+    width: 100%; /* Ensure card content takes the full width */
+    margin: 0%;
+    
+}
+
+.card-actions {
+    width: 100%; /* Ensure card actions take the full width */
+}
+
+#txt{
+    font-size: x-small;
+}
+#title-name{
+    margin-right: auto;
+    font-size:xx-large;
+    font-weight: bold;
+    margin-top: 3vh;
+}
+#sub-title{
+    font-size: larger;
+    margin-right: auto;   
+    margin-bottom: 4vh;
+    margin-top: 2vh;
+}
